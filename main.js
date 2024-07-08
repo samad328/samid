@@ -8867,7 +8867,35 @@ while loading this video:
 
 
 
-martin()
+// Preload images
+const preloadImages = new Promise((resolve, reject) => {
+    imagesLoaded(document.querySelectorAll("img"), { background: true }, resolve);
+  });
+  
+  preloadImages.then(images => {
+    let IMAGES = images.images;
+  });
+  
+  const preloadEverything = [ preloadImages];
+  
+  // And then..
+  Promise.all(preloadEverything).then(() => {
+  
+    document.body.classList.remove("loading");
+    document.body.classList.add("loaded");
+    martin()
+  // load images
+  
+  
+
+
+
+
+
+  
+  });
+  
+  
   
   
   

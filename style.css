@@ -2368,7 +2368,7 @@ blockquote p {
 /* Preloder */
 
 /* Page Loader */
-/* .js .loading::before,
+.js .loading::before,
 .js .loading::after {
 	content: '';
 	position: fixed;
@@ -2401,7 +2401,7 @@ blockquote p {
 		opacity: 1;
 		transform: scale3d(0.5,0.5,1);
 	}
-} */
+}
 
 
 
