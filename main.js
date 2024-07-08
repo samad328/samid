@@ -15,7 +15,79 @@ import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable);
 
+// const lenis = new Lenis({
+//   lerp: 0.05, // Lower values create a smoother scroll effect
+//   smoothWheel: true // Enables smooth scrolling for mouse wheel events
+// })
 
+// // lenis.on('scroll', console.log)
+
+// function raf(time) {
+// lenis.raf(time)
+// requestAnimationFrame(raf)
+// }
+// requestAnimationFrame(raf);
+
+// lenis.start();
+
+//   //  
+
+
+
+  // Script Registration
+// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+// Intro Homepage Start
+
+//Intro Homepage End
+
+// Anchor Navigation
+/* Main navigation */
+
+let panelsSection = document.querySelector("#panels"),
+	panelsContainer = document.querySelector("#panels-container");
+	let tween;
+document.querySelectorAll(".anchor").forEach(anchor => {
+	anchor.addEventListener("click", function(e) {
+		e.preventDefault();
+		let targetElem = document.querySelector(e.target.getAttribute("href"))
+      
+			let y = targetElem;
+            console.log(y)
+		if (targetElem && panelsContainer.isSameNode(targetElem.parentElement)) {
+            
+			let totalScroll = tween.scrollTrigger.end - tween.scrollTrigger.start,
+				totalMovement = (panels.length - 1) * targetElem.offsetWidth;
+			y = Math.round(tween.scrollTrigger.start + (targetElem.offsetLeft / totalMovement) * totalScroll);
+		}
+		gsap.to(window, {
+			scrollTo: {
+				y: '#portfolio-content',
+				autoKill: false
+			},
+			duration: 1
+		});
+	});
+});
+
+
+const panels = gsap.utils.toArray("#panels-container");
+
+tween = gsap.to(panels, {
+	xPercent: -100 * ( panels.length - 1 ),
+	ease: "none",
+	scrollTrigger: {
+		trigger: "#panels-container",
+		pin: true,
+		start: "top top",
+		scrub: 1,
+		snap: {
+			snapTo: 1 / (panels.length - 1),
+			inertia: false,
+			duration: {min: 0.1, max: 0.1}
+		},
+		end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
+	}
+});
 
 
 // Cursor effect
@@ -110,6 +182,46 @@ const clamp = (min, number, max) => Math.min(max, Math.max(number, min));
         });
     });
 
+// End Portfolio JS
+
+// Home Page Animation
+// Website Animation
+
+// Preloader Filter
+(function() {
+    const blurProperty = gsap.utils.checkPrefix("filter"),
+          blurExp = /blur\((.+)?px\)/,
+          getBlurMatch = target => (gsap.getProperty(target, blurProperty) || "").match(blurExp) || [];
+  
+    gsap.registerPlugin({
+      name: "blur",
+      get(target) {
+        return +(getBlurMatch(target)[1]) || 0;
+      },
+      init(target, endValue) {
+        let data = this,
+            filter = gsap.getProperty(target, blurProperty),
+            endBlur = "blur(" + endValue + "px)",
+            match = getBlurMatch(target)[0],
+            index;
+        if (filter === "none") {
+          filter = "";
+        }
+        if (match) {
+          index = filter.indexOf(match);
+          endValue = filter.substr(0, index) + endBlur + filter.substr(index + match.length);
+        } else {
+          endValue = filter + endBlur;
+          filter += filter ? " blur(0px)" : "blur(0px)";
+        }
+        data.target = target; 
+        data.interp = gsap.utils.interpolate(filter, endValue); 
+      },
+      render(progress, data) {
+        data.target.style[blurProperty] = data.interp(progress);
+      }
+    });
+  })();
 
 
 
@@ -8834,37 +8946,7 @@ while loading this video:
     });
 }
 
-/*!
- * CSSPlugin 3.6.0
- * https://greensock.com
- *
- * Copyright 2008-2021, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
- * @author: Jack Doyle, jack@greensock.com
-*/
-/*!
- * GSAP 3.6.0
- * https://greensock.com
- *
- * @license Copyright 2008-2021, GreenSock. All rights reserved.
- * Subject to the terms at https://greensock.com/standard-license or for
- * Club GreenSock members, the agreement issued with that membership.
- * @author: Jack Doyle, jack@greensock.com
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
+martin()
 
 
 // Preload images
@@ -8883,10 +8965,9 @@ const preloadImages = new Promise((resolve, reject) => {
   
     document.body.classList.remove("loading");
     document.body.classList.add("loaded");
-    martin()
   // load images
   
-  
+ 
 
 
 
