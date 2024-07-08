@@ -8867,57 +8867,7 @@ while loading this video:
 
 
 
-// Preload images
-const preloadImages = new Promise((resolve, reject) => {
-    imagesLoaded(document.querySelectorAll("img"), { background: true }, resolve);
-  });
-  
-  preloadImages.then(images => {
-    let IMAGES = images.images;
-  });
-  
-  const preloadEverything = [ preloadImages];
-  
-  // And then..
-  Promise.all(preloadEverything).then(() => {
-  
-    document.body.classList.remove("loading");
-    document.body.classList.add("loaded");
-  // load images
-  
-  
-  //progress animation
-  var progressTl = gsap.timeline({  onComplete: loadComplete });
-  
-  
-  // preloader out
-  var preloaderOutT1 = gsap.timeline();
-  preloaderOutT1
-    .set('html', { className: 'is-loading' })
-    .set('html', { className: 'is-loaded' })
-    .from('.intro', 0.1, { autoAlpha: 0, ease: 'Power1.easeOut' }, '-=0.2')
-    .from(".logo", { y: -30, duration: 1.4, opacity: 0, ease: "power4", }, '-=0.2')
-    .from(".navbar", { y: -30, duration: 1.4, opacity: 0 }, "<0.3")
-    .from(".wrappar-title, .bio_social, .bio_copyrights", { y: 30, duration: 1.4, opacity: 0, ease: "power4" }, "<0.3")
-    .from(".o1, .o2, .o3, .o4", { autoAlpha: 0, duration: 2, skewX: -30, yPercent: 100, ease: "power4", stagger: 0.1, blur: 10 }, "<0.25");
-  //force the playhead to jump to the end in order to pre-render all the tweens, then back to the start and pause.
-  
-  function loadComplete() {
-    preloaderOutT1.play();
-  }
-  // Do not repeat the loader again
-
-//   curtains()
-
 martin()
-
-
-
-
-  
-  });
-  
-  
   
   
   

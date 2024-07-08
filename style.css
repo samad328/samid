@@ -519,7 +519,7 @@ a.download-resume {
   text-align: right;
 }
 
-.loader {
+/* .loader {
   position: fixed;
   width: 100vw;
   height: 200vh;
@@ -528,9 +528,9 @@ a.download-resume {
   z-index: 1;
   visibility: hidden;
   opacity: 0;
-}
+} */
 
-.preload-holder {
+/* .preload-holder {
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -539,7 +539,7 @@ a.download-resume {
   z-index: 1000;
   font-family: Ogg;
   overflow: hidden;
-}
+} */
 
 .prewrap {
   position: relative;
@@ -2368,7 +2368,7 @@ blockquote p {
 /* Preloder */
 
 /* Page Loader */
-.js .loading::before,
+/* .js .loading::before,
 .js .loading::after {
 	content: '';
 	position: fixed;
@@ -2401,7 +2401,7 @@ blockquote p {
 		opacity: 1;
 		transform: scale3d(0.5,0.5,1);
 	}
-}
+} */
 
 
 
