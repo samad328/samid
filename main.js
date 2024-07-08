@@ -42,6 +42,7 @@ gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable);
 
 // Anchor Navigation
 /* Main navigation */
+
 let panelsSection = document.querySelector("#panels"),
 	panelsContainer = document.querySelector("#panels-container");
 	let tween;
@@ -68,7 +69,7 @@ document.querySelectorAll(".anchor").forEach(anchor => {
 	});
 });
 
-/* Panels */
+
 const panels = gsap.utils.toArray("#panels-container");
 
 tween = gsap.to(panels, {
