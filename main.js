@@ -8562,13 +8562,6 @@ while loading this video:
             this.initStore(),
             this.initAnalytics(),
             this.loadFonts(),
-            this.production && (console.log("%cHey there fellow dev friend!", 'font-size: 14px; color: #111111; font-weight: 700; font-family: "Swiss", Arial, sans-serif;'),
-            console.log("%cHere is a complete list of all the libs used on this website:", 'font-size: 14px; color: #111111; font-family: "Swiss", Arial, sans-serif;'),
-            console.log("%cPJAX router: https://github.com/martinlaxenaire/pjax-router", 'font-size: 14px; color: #111111; font-family: "Swiss", Arial, sans-serif;'),
-            console.log("%cSmooth scroll: https://github.com/martinlaxenaire/native-smooth-scroll", 'font-size: 14px; color: #111111; font-family: "Swiss", Arial, sans-serif;'),
-            console.log("%cScroll observer: https://github.com/martinlaxenaire/scroll-observer", 'font-size: 14px; color: #111111; font-family: "Swiss", Arial, sans-serif;'),
-            console.log("%ccurtains.js: https://github.com/martinlaxenaire/curtainsjs", 'font-size: 14px; color: #111111; font-family: "Swiss", Arial, sans-serif;'),
-            console.log("%cGSAP: https://github.com/greensock/GSAP", 'font-size: 14px; color: #111111; font-family: "Swiss", Arial, sans-serif;')),
             window.addEventListener("load", this.onWindowLoad.bind(this))
         }
         loadFonts() {

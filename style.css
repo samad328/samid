@@ -268,6 +268,7 @@ p {
 }
 
 .about_title {
+  margin-bottom: 1rem;
   grid-column: 2/4;
 }
 
@@ -1565,6 +1566,7 @@ a.view-project:hover img {
     width: 60%;
   }
   .bio_about .row {
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -3124,6 +3126,7 @@ html,body{
 }
 .paragraphs p{
   max-width: 70ch;
+  padding-right: 3rem;
 }
 
 .about_img{
@@ -3150,8 +3153,12 @@ html,body{
   }
   .paragraphs{
     order: 2;
-    max-width: 90ch;
+    /* max-width: 100%; */
     
+  }
+  .paragraphs p{
+    max-width: 100%;
+   
   }
 }
 
@@ -3177,7 +3184,7 @@ html,body{
 
 @font-face {
   font-family: "MonumentExtended Regular";
-  src: url(MonumentExtended-Regular.SFFAV6VO.woff2) format("woff2"),url(MonumentExtended-Regular.WUUMIEFI.woff) format("woff");
+  src: url(/fonts/Ogg-Medium.woff2) format("woff2"),url(/fonts/Ogg-Medium.woff2) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap
@@ -3185,7 +3192,7 @@ html,body{
 
 @font-face {
   font-family: "MonumentExtended UltraBold";
-  src: url(MonumentExtended-UltraBold.V3YJPPWI.woff2) format("woff2"),url(MonumentExtended-UltraBold.LLZXKRMM.woff) format("woff");
+  src: url(/fonts/Ogg-Medium.woff2) format("woff2"),url(/fonts/Ogg-Medium.woff2) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap
@@ -3193,14 +3200,14 @@ html,body{
 
 @font-face {
   font-family: "Swiss";
-  src: url(Swiss-721-BT-Regular.M6K6643H.woff2) format("woff2"),url(Swiss-721-BT-Regular.SBW6H6Z4.woff) format("woff");
+  src: url(/fonts/Ogg-Medium.woff2) format("woff2"),url(/fonts/Ogg-Medium.woff2) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   unicode-range: U+000-5FF
 }
 
-:root {
+/* :root {
   --bg-color: #ffffff;
   --main-text-color: #0505AF;
   --fade-text-color: #afacd4;
@@ -3213,7 +3220,7 @@ html,body{
   --light-display-font: "MonumentExtended Regular",Arial,sans-serif;
   --gutter-size: 2vw;
   --height-space: 20vh
-}
+} */
 
 
   html,body {
@@ -3260,7 +3267,7 @@ html,body{
   }
 
   a {
-      color: var(--main-text-color);
+      /* color: var(--main-text-color); */
       text-decoration: none
   }
 
@@ -3330,7 +3337,7 @@ html,body{
   }
 
   
-
+/* 
   #loader {
       width: 100vw;
       height: 100vh;
@@ -3347,7 +3354,7 @@ html,body{
       opacity: 0;
       transition: opacity .35s ease-in-out;
       pointer-events: none
-  }
+  } */
 
 
   .dg.ac {
