@@ -3145,11 +3145,12 @@ html,body{
     /* align-items: flex-start; */
     justify-content: flex-start;
     gap: 2rem;
-    padding: 3rem;
+    /* padding: 3rem; */
     width: 100%;
   }
   .samad_pic{
     width: 80%;
+    padding: 3rem;
   }
   .about_img{
     order: 1;
